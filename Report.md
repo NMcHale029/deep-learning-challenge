@@ -1,11 +1,5 @@
-# deep-learning-challenge
-Dependencies include:
-- train_test_split from sklearn.model_selection
-- StandardScaler from sklearn.preprocessing 
-- tensorflow as tf
-- pandas as pd
-
 # Overview 
+
 Alphabet Soup wants a tool that can help it select the applicants for funding with the best chance of success in their ventures. Using the dataset, a binary classifier model is created to predict whether applicants will be successful if funded by Alphabet Soup.
 
 The dataset is a CSV containing more than 34,000 organizations that have received funding from Alphabet Soup over the years. Within this dataset the following columns:
@@ -24,8 +18,6 @@ The dataset is a CSV containing more than 34,000 organizations that have receive
 
 # Results
 ## Data Preprocessing
-Data was read in from a csv file to a pandas dataframe. Data was cleaned by dropping columns, and creating dummies for categorical fields using pd.get_dummies(). Data was split using train_test_split(). Training and test data was then scaled using StandardScaler().
-
 The 'IS_SUCCESSFUL' variable was used as the target for each model.
 EIN and NAME were removed from the dataset, and were not targets or features.
 All other variables were used as features in the other models. One model (nn_optimazation3) did not use APPLICATION_TYPE or CLASSIFICATION.
@@ -66,5 +58,8 @@ Creating this model and running it through 100 epochs:
 - Loss: .553
 - Accuracy: .730
 
+
 # Summary
 Using the above models on the data that was provided, a model that could produce .75 could not be found. Eliminating Classification and Application Type lowered the accuracy and increased loss, indicating that these variables are important to the model. Further experiementing could be done eliminating other combinations of variables. Also, the maximum number of epochs run was 100. In the models used, it appeard that improvement leveled off around 50 epochs. With a different dataset, this may change, and more epochs could help produce a better model. Given the best model from the kerasturner seach had 5 layers, a future model should consider using more layers (4-6).
+
+
