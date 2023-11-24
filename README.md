@@ -22,6 +22,8 @@ The dataset is a CSV containing more than 34,000 organizations that have receive
 - ASK_AMT—Funding amount requested
 - IS_SUCCESSFUL—Was the money used effectively
 
+Original model was created using the 'deep-learning-challenge' notebook. Each optimization attempt was saved in a different numbered notebook. The Kerasturner Search was conducted in Optimization4 and the best model was created and saved to the AlphabetSoupCharity_Optimized h5 file.
+
 # Results
 ## Data Preprocessing
 Data was read in from a csv file to a pandas dataframe. Data was cleaned by dropping columns, and creating dummies for categorical fields using pd.get_dummies(). Data was split using train_test_split(). Training and test data was then scaled using StandardScaler().
